@@ -1,0 +1,20 @@
+{
+  "name": "showcar",
+  "version": "1.0.0",
+  "description": "ShowCar es una página web diseñada para mostrar y explorar una variedad de automóviles con detalles específicos y características visualmente atractivas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^9.15.0",
+    "globals": "^15.12.0",
+    "typescript-eslint": "^8.15.0"
+  },
+  "scripts": {
+  "lint": "eslint ."
+}
+}
