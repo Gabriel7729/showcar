@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# Verifica si el mensaje de commit contiene una descripción.
+COMMIT_MSG_FILE=$1
+COMMIT_MSG=$(cat $COMMIT_MSG_FILE)
+
+# Si el mensaje de commit está vacío, muestra un error.
+if [ -z "$COMMIT_MSG" ]; then
+  echo "Error: El commit debe tener una descripción." >&2
+  exit 1
+fi
+
+# Si el mensaje de commit no empieza con una mayúscula, muestra un error.
+if [[ ! "$COMMIT_MSG" =~ ^[A-Z] ]]; then
+  echo "Error: El mensaje de commit debe comenzar con una letra mayúscula." >&2
+  exit 1
+fi
+
+# Si el mensaje de commit es demasiado corto, muestra un error.
+if [ ${#COMMIT_MSG} -lt 10 ]; then
+  echo "Error: El mensaje de commit debe ser más largo." >&2
+  exit 1
+fi
+
+exit 0
